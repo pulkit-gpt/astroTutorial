@@ -14,7 +14,10 @@
   },
   "description": "```sh npm create astro@latest -- --template basics ```",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.12.3"
+  },
   "author": "pupta",
   "license": "ISC"
 }
