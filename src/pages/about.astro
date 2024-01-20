@@ -1,7 +1,11 @@
 ---
 const pageTitle = 'About';
-
+let skillColor='navy';
+let skillFontWeight='900';
+let skillFontCase='capitalize';
 let skills=['html','astro'];
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
 ---
 
 <html lang="en">
@@ -11,14 +15,22 @@ let skills=['html','astro'];
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style define:vars={{skillColor,skillFontWeight,skillFontCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+
+    .skills {
+    color: var(--skillColor);
+    font-weight: var(--skillFontWeight);
+    text-transform: var(--skillFontCase);
+    }
+    </style>
 	</head>
 <body>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-    </nav>
+    <Navigation />
   <h1>My Astro Site</h1>
   <h1>About Me</h1>
   <h2>... and my new Astro site!</h2>
@@ -29,7 +41,7 @@ let skills=['html','astro'];
     <p>My skills:</p>
     <ul>
         {skills.map((skill) => (
-            <li><a href={`/${skill}`}>{skill}</a></li>
+            <li class="skills">{skill}</li>
         ))}
     </ul>
     { true && <p>It's true!</p>}

@@ -1,5 +1,7 @@
 ---
 const pageTitle="Index File";
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
 ---
 
 <html lang="en">
@@ -11,11 +13,7 @@ const pageTitle="Index File";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-	 <nav>
-        <a href="/">Home</a>
-		<a href="/blog">Blog</a>
-        <a href="/about">About</a>
-    </nav>
+<Navigation />
 		<h1>My Astro</h1>
 	</body>
 </html>
