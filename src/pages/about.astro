@@ -5,6 +5,7 @@ let skillFontWeight='900';
 let skillFontCase='capitalize';
 let skills=['html','astro'];
 import '../styles/global.css';
+import Footer from '../components/footer.astro';
 import Navigation from '../components/navigation.astro';
 ---
 
@@ -46,7 +47,7 @@ import Navigation from '../components/navigation.astro';
     </ul>
     { true && <p>It's true!</p>}
     { false ? <p>It's false!</p>: <p>It's true!</p>}
-        
+    <Footer />        
 
 </body>
 </html>
