@@ -1,8 +1,16 @@
 ---
-const platform = 'github';
-const user = 'pulkit-gpt';
+import Social from "./social.astro"
 ---
 
 <footer>
-        <p>Learn more about my projects on my <a href={`https://www.${platform}.com/${user}`}>Github</a>.</p>
+        <p>Learn more about my projects on my <Social platform="Github" username="pulkit-gpt">.</p>
+        <p>Check out my <Social platform="Instagram" username="hiiampulkitg">.</p>
 </footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
